@@ -90,11 +90,16 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
-  const isAdmin = () => {
+  // Compute isAdmin from user role if available, otherwise from token
+  const isAdmin = user ? user.role === 'admin' : (() => {
     if (!token) return false;
-    const decoded = decodeToken(token);
-    return decoded?.role === 'admin';
-  };
+    try {
+      const decoded = decodeToken(token);
+      return decoded?.role === 'admin';
+    } catch {
+      return false;
+    }
+  })();
 
   const value = {
     user,
@@ -102,7 +107,7 @@ export const AuthProvider = ({ children }) => {
     login,
     register,
     logout,
-    isAdmin: isAdmin(),
+    isAdmin,
     loading,
   };
 
