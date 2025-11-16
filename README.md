@@ -329,23 +329,7 @@ Throughout the development of this Sweet Shop Management System, I leveraged var
 
 ### AI Tools Used
 
-#### 1. **Cursor AI (Primary Tool)**
-- **Purpose**: Code generation, debugging, and refactoring
-- **Usage**: 
-  - Generated complete frontend components (Login, Register, Dashboard, AdminPanel)
-  - Created backend controllers and middleware
-  - Fixed database index issues and error handling
-  - Refactored code for better structure and maintainability
-
-#### 2. **GitHub Copilot**
-- **Purpose**: Inline code suggestions and autocompletion
-- **Usage**:
-  - Suggested React hooks and component patterns
-  - Auto-completed API endpoint structures
-  - Generated utility functions for JWT decoding
-  - Provided boilerplate code for error handling
-
-#### 3. **ChatGPT (OpenAI)**
+#### 1. **ChatGPT (OpenAI)**
 - **Purpose**: Problem-solving and architecture decisions
 - **Usage**:
   - Brainstormed API endpoint structures and RESTful design
@@ -358,7 +342,7 @@ Throughout the development of this Sweet Shop Management System, I leveraged var
 #### 1. **Frontend Development**
 
 **Component Generation:**
-- I used Cursor AI to generate the complete React component structure for the Dashboard, AdminPanel, and authentication pages. For example, I prompted: *"Create a Dashboard component that fetches sweets from the API and displays them in a grid layout with search functionality"*
+- I used ChatGPT AI to generate the complete React component structure for the Dashboard, AdminPanel, and authentication pages. For example, I prompted: *"Create a Dashboard component that fetches sweets from the API and displays them in a grid layout with search functionality"*
 
 **State Management:**
 - Used AI to design the AuthContext structure. I asked: *"How should I structure a React context for authentication that handles login, register, and token management?"*
@@ -371,11 +355,8 @@ Throughout the development of this Sweet Shop Management System, I leveraged var
 **API Endpoint Design:**
 - Used ChatGPT to brainstorm the RESTful API structure. Discussion: *"What endpoints do I need for a sweet shop management system with user and admin roles?"*
 
-**Error Handling:**
-- Asked Cursor AI: *"How should I handle MongoDB duplicate key errors and provide meaningful error messages?"* This led to improved error handling in the authController.
-
 **Database Schema:**
-- Consulted AI about Mongoose schema design: *"What's the best way to store images in MongoDB? Should I use Buffer or Cloudinary?"*
+- Consulted ChatGPT about Mongoose schema design: *"What's the best way to store images in MongoDB? Should I use Buffer or Cloudinary?"*
 
 #### 3. **Problem Solving**
 
@@ -470,8 +451,8 @@ This project is licensed under the ISC License.
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@pawans993](https://github.com/pawans993)
+- Email: pavank.ic.22@nitj.ac.in
 
 ## 🙏 Acknowledgments
 
