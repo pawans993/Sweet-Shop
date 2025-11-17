@@ -23,8 +23,18 @@ connectDB();
 const app = express();
 
 // CORS configuration
+const allowedOrigins = (process.env.FRONTEND_URLS || process.env.FRONTEND_URL || "https://sweet-shop-self.vercel.app")
+  .split(",")
+  .map(origin => origin.trim())
+  .filter(Boolean);
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "https://sweet-shop-self.vercel.app/login",
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error(`Origin ${origin} not allowed by CORS`));
+  },
   credentials: true
 }));
 
